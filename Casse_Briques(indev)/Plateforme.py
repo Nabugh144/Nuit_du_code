@@ -19,3 +19,6 @@ class Plateforme():
             self.x += 1
         if pyxel.btn(pyxel.KEY_LEFT) and self.x>0:
             self.x += -1
+    
+    def draw(self):
+        pyxel.rect(self.x, self.y, 20, 5, 1)

@@ -7,3 +7,6 @@ class Brique():
         self.y = y
         self.width = 10
         self.height = 5
+    
+    def draw(self):
+        pyxel.rect(self.x, self.y, self.width, self.height, 4)
