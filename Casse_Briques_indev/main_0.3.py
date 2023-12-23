@@ -7,7 +7,7 @@ Testé : Rien
 import pyxel
 from Plateforme import Plateforme
 from Balle import Balle
-from Briques import Brique
+from Briques import *
 from Levels import Levels
 
 class Jeu:
@@ -15,7 +15,7 @@ class Jeu:
         
         # taille de la fenetre 128x128 pixels
         # ne pas modifier
-        pyxel.init(128, 128, title="Nuit du c0de", fps=60)
+        pyxel.init(128, 128, title="Nuit du c0de", fps=600)
 
         # création de la pateforme
         self.plateforme_1 = Plateforme (20,5)
@@ -51,12 +51,11 @@ class Jeu:
 
             # deplacement de la balle
             self.balle.deplacement(self.nb_update, self.plateforme_1, self.level.current_level)
-            """
-            if self.nb_update == 600 :
-                self.current_level += 1
-                self.level = Levels(self.current_level)
-            """
-
+            
+            if self.level.current_level == [] :
+                if self.current_level + 1 in self.level.levels:
+                    self.current_level += 1
+                    self.level = Levels(self.current_level)
         else :
             self.start()
         
