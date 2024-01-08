@@ -25,7 +25,7 @@ class Jeu:
 
         self.nb_update = 0
 
-        self.current_level = 2
+        self.current_level = 1
 
         self.level = Levels(self.current_level)
 
