@@ -31,10 +31,10 @@ class Balle ():
         
         #si la balle touche la plateforme, la balle rebondit
         if self.y == 123 :
-            # - self.ray and self.x >= plateforme.x and self.x <= plateforme.x + plateforme.width
+            - self.ray and self.x >= plateforme.x and self.x <= plateforme.x + plateforme.width
             self.y_modifier = -self.y_modifier
-            #if self.x <= plateforme.x + 14 or self.x >= plateforme.x + 7 :
-            #    self.x_modifier = 0
+            if self.x <= plateforme.x + 14 or self.x >= plateforme.x + 7 :
+                self.x_modifier = 0
             if self.x <= plateforme.x + 7 :
                 self.x_modifier = -1
             if self.x >= plateforme.x + 13 :

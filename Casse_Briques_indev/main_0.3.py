@@ -15,7 +15,7 @@ class Jeu:
         
         # taille de la fenetre 128x128 pixels
         # ne pas modifier
-        pyxel.init(128, 128, title="Nuit du c0de", fps=600)
+        pyxel.init(128, 128, title="Nuit du c0de", fps=60)
 
         # création de la pateforme
         self.plateforme_1 = Plateforme (20,5)
@@ -25,7 +25,7 @@ class Jeu:
 
         self.nb_update = 0
 
-        self.current_level = 1
+        self.current_level = 2
 
         self.level = Levels(self.current_level)
 

@@ -12,7 +12,7 @@ class Brique():
         self.textures = {
             1 : (self.x, self.y, 0,24,0,10,5),
             2 : (self.x, self.y, 0,12,0,10,5),
-            3 : (self.x, self.y, 0,0,0,10,5),
+            3 : (self.x, self.y, 0,0,0,10,5)
         }
     
     def draw(self):
