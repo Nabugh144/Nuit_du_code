@@ -12,3 +12,4 @@ class Grid ():
     
     def insert(self, coordinates, token):
         token.x, token.y = coordinates
+        self.grid[token.y][token.x] = token

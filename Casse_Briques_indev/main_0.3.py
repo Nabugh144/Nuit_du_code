@@ -70,6 +70,8 @@ class Jeu:
 
         for i in self.level.current_level :
             i.draw()
+            if i.hardness == 0 :
+                i.power_up.draw()
         
         # plateforme (rectangle 20x5)
         self.plateforme_1.draw()

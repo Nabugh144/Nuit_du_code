@@ -47,19 +47,19 @@ class Balle ():
             # côté gauche de la brique
             if self.x == brique.x - self.ray and self.y >= brique.y and self.y <= brique.y + brique.height and self.x_precedent == brique.x - 1 - self.ray :
                 self.x_modifier = -self.x_modifier
-                brique.hardness -= 1
+                brique.touchee()
             # côté droit de la brique
             elif (self.x == brique.x + self.ray + brique.width and self.y >= brique.y and self.y <= brique.y + brique.height) and self.x_precedent == brique.x + 1 + self.ray + brique.width:
                 self.x_modifier = -self.x_modifier
-                brique.hardness -= 1
+                brique.touchee()
             # côté haut de la brique
             elif (self.y == brique.y - self.ray and self.x >= brique.x and self.x <= brique.x + brique.width) and self.y_precedent == brique.y - 1 - self.ray:
                 self.y_modifier = -self.y_modifier
-                brique.hardness -= 1
+                brique.touchee()
             # côté bas de la brique
             elif (self.y == brique.y + self.ray + brique.height and self.x >= brique.x and self.x <= brique.x + brique.width) and self.y_precedent == brique.y + 1 + self.ray + brique.height:
                 self.y_modifier = -self.y_modifier
-                brique.hardness -= 1
+                brique.touchee()
                 
         # supprimer les briques ayant une dureté de 0
         for brique in liste_brique:
