@@ -10,8 +10,13 @@ class Grid ():
     def clear(self) -> None :
         self.grid = [[None for i in range(self.width)] for j in range(self.height)]
     
-    def insert(self, coordinates, token):
-        token.x, token.y = coordinates
+    def insert(self, token):
+
+        for y in range (len(self.grid),0,-1) :
+            if self.grid[y][token.x] == None :
+                token.y = y
+                break
+
         self.grid[token.y][token.x] = token
 
     def draw(self):

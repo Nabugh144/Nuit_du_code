@@ -28,8 +28,8 @@ class Jeu():
                 self.token.x -= 1
         if pyxel.KEY_KP_ENTER :
             
-            # le pion se place sur la dernière ligne
-            
+            self.grid.insert(self.token)
+
             if self.current_color == "Jaune" :
                 self.current_color = "Rouge"
             else : self.current_color = "Jaune"
