@@ -6,3 +6,6 @@ class Token():
         self.color = color
         self.x, self.y = coordinates
         pyxel.load(self.x, self.y, "Ressources\plateau.png")
+
+    def draw() -> None:
+        pass
