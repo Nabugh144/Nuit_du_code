@@ -1,0 +1,37 @@
+Planification du jeu Puissance 4
+
+Identifier les phases de développement
+- Graphisme
+	- T2 Affichage des éléments : grille, pions, scores, informations (a  définir)
+	- T3 Déplacement des éléments du jeu : pions
+	- T4 Afficher l'alignement du vainqueur ou match-null
+
+- Interaction joueur
+	- T5 Détection des touches ( flèches, validation avec enter )
+
+- Stratégie du jeu 
+	- T7 Détecter les possibles alignements
+
+- T1 Quelles structures de données pour stocker les infos :
+	- Jeu -> matrice 6x7 : [][] 
+	- Pion -> POO : instance de classe dans la matrice
+
+
+Liste des tâches				/ dép. 	/ prio	/ temps	/ Qui ? 
+
+###
+T1 : déclaration des structures de données 	/ ---	/ 1	/ 2
+	- déclaration des classes
+	- déclaration des méthodes
+
+T2 : affichage des éléments graphiques		/ T1	/ 2	/ 2
+
+T3 : Déplacement des éléments			/ T2	/ 2	/ 3
+
+T4 : Afficher alignements vainqueur		/ T7	/ 5	/ 1	
+
+###
+T5 : Détection des touches			/ T1	/ 2	/ 2
+
+###
+T7 : Détection des alignements			/ ---	/ 1	/ 3
